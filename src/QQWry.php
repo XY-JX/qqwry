@@ -163,10 +163,10 @@ class QQWry
         // 判断是否为IPv6地址
         if (filter_var($ipv6, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6)) {
             // 将IPv6地址转换IPv4
-            return hexdec(substr($ipv6, 0, 2)).".".hexdec(substr($ipv6, 2, 2))
-                .".".hexdec(substr($ipv6, 5, 2)).".".hexdec(
-                    substr($ipv6, 7, 2)
-                );
+            return @hexdec(substr($ipv6, 0, 2)).".".
+                @hexdec(substr($ipv6, 2, 2)).".".
+                @hexdec(substr($ipv6, 5, 2)).".".
+                @hexdec(substr($ipv6, 7, 2));
         }
 
         // 如果不是IPv6返回原始IP地址
