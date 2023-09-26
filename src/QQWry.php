@@ -76,7 +76,7 @@ class QQWry
             }
         }
 
-        $location['ip'] = $ip;   // 将输入的域名转化为IP地址
+        $location['ip'] = $this->ipv6To4($ip);   // 将输入的IP6转化为IP4地址
         $ip             = $this->packip(
             $location['ip']
         );   // 将输入的IP地址转化为可比较的IP地址
@@ -149,6 +149,28 @@ class QQWry
         }
 
         return $location;
+    }
+
+    /**
+     * ip6转ip4
+     *
+     * @param $ipv6
+     *
+     * @return mixed|string
+     */
+    private function ipv6To4($ipv6)
+    {
+        // 判断是否为IPv6地址
+        if (filter_var($ipv6, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6)) {
+            // 将IPv6地址转换IPv4
+            return hexdec(substr($ipv6, 0, 2)).".".hexdec(substr($ipv6, 2, 2))
+                .".".hexdec(substr($ipv6, 5, 2)).".".hexdec(
+                    substr($ipv6, 7, 2)
+                );
+        }
+
+        // 如果不是IPv6返回原始IP地址
+        return $ipv6;
     }
 
     /**
