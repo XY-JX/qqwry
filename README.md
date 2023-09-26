@@ -3,7 +3,7 @@
 ### 第一步：composer安装
 
 ```
- composer require xy_jx/utils
+ composer require xy_jx/qqwry
 ```
 
 ### 第二步使用：
