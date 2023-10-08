@@ -1,5 +1,11 @@
 <h2 align="center">qqwry 纯真IP数据库</h2>
 
+[![Latest Stable Version](http://poser.pugx.org/xy_jx/qqwry/v)](https://packagist.org/packages/xy_jx/qqwry)
+[![Total Downloads](http://poser.pugx.org/xy_jx/qqwry/downloads)](https://packagist.org/packages/xy_jx/qqwry)
+[![Latest Unstable Version](http://poser.pugx.org/xy_jx/qqwry/v/unstable)](https://packagist.org/packages/xy_jx/qqwry)
+[![License](http://poser.pugx.org/xy_jx/qqwry/license)](https://packagist.org/packages/xy_jx/qqwry)
+[![PHP Version Require](http://poser.pugx.org/xy_jx/qqwry/require/php)](https://packagist.org/packages/xy_jx/qqwry)
+
 ### 第一步：composer安装
 
 ```
