@@ -1,4 +1,4 @@
-## qqwry 纯真IP数据库
+<h2><p align="center">qqwry 纯真IP数据库</p></h2>
 
 ### 第一步：composer安装
 
